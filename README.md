@@ -33,7 +33,14 @@ Run the following scripts to download and preprocess SleepEDF-20 dataset
     $ python preprocess_edf.py
     
 ##  Training DREAM
-Run the following script to train DREAM
+Run the following scripts to train DREAM
+
+For Supervised DREAM
 
     $ batch job_batch.txt 
+    
+For Semi-supervised DREAM
+
+    $ batch job_batch_semi_sup.txt 
+
 
