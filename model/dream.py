@@ -7,7 +7,18 @@ import numpy as np
 from TorchCRF import CRF
 from pytorch_metric_learning import losses
 
+##################### Supervised contrastive loss
+class SupervisedContrastiveLoss(nn.Module):
+    def __init__(self):
+        super(SupervisedContrastiveLoss, self).__init__()
+        self.tau = 0.07
 
+    def forward(self, feature_vectors, labels):
+        # Normalize feature vectors
+        logits = F.normalize(feature_vectors, p=2, dim=1)
+                
+        return losses.NTXentLoss(temperature=self.tau)(logits, torch.squeeze(labels))
+    
 ##################### ResNet block
 def conv3(in_planes, out_planes, stride=1):
     return nn.Conv1d(in_planes, out_planes, kernel_size=3, stride=stride, padding=1, bias=False)
@@ -371,17 +382,6 @@ class VAE(nn.Module):
         return out
 
 
-##################### Supervised contrastive loss
-class SupervisedContrastiveLoss(nn.Module):
-    def __init__(self):
-        super(SupervisedContrastiveLoss, self).__init__()
-        self.tau = 0.07
-
-    def forward(self, feature_vectors, labels):
-        # Normalize feature vectors
-        logits = F.normalize(feature_vectors, p=2, dim=1)
-                
-        return losses.NTXentLoss(temperature=self.tau)(logits, torch.squeeze(labels))
 
 ##################### Classification Net
 class Transformer(nn.Module):
