@@ -63,9 +63,9 @@ EPOCH_SEC_SIZE = 30
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", type=str, default="/data/edf_78",
+    parser.add_argument("--data_dir", type=str, default="../data/edf_20",
                         help="File path to the PSG and annotation files.")
-    parser.add_argument("--output_dir", type=str, default="/data_npz/edf_78_fpzcz",
+    parser.add_argument("--output_dir", type=str, default="../data_npz/edf_20_fpzcz",
                         help="Directory where to save numpy files outputs.")
     parser.add_argument("--select_ch", type=str, default="EEG Fpz-Cz",
                         help="The selected channel")
