@@ -31,5 +31,7 @@ Run the following scripts to download and preprocess SleepEDF-20 dataset
     $ python prepare_physionet.py
     
 ##  Training DREAM
+Run the following script to train DREAM
+
     $ batch job_batch.txt 
 
