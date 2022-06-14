@@ -28,7 +28,7 @@ Used modules: numpy, scipy, pandas, scikit-learn, TorchCRF, pytorch_metric_learn
 Run the following scripts to download and preprocess SleepEDF-20 dataset
 
     $ cd data/edf_20
-    $ bash download_edf20.sh
+    $ bash download_edf_20.sh
     $ cd ../..
     $ python preprocess_edf.py
     
