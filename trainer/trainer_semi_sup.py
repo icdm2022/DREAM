@@ -73,7 +73,7 @@ class Trainer(BaseTrainer):
 
             if phase == 'Supervised learning':
                 output = self.feature_net.predict(x)
-                loss = self.criterion(output, y, self.class_weights, self.device)
+                loss = self.criterion(output, y)
                 self.train_metrics.update('loss', loss.item())
                 preds_ = output.data.max(1, keepdim=True)[1].cpu().numpy() 
                 outs = np.append(outs, preds_)
@@ -115,7 +115,7 @@ class Trainer(BaseTrainer):
                 x, y = x.to(self.device), y.to(self.device)
 
                 output = self.feature_net.predict(x)
-                loss = self.criterion(output, y, self.class_weights, self.device)
+                loss = self.criterion(output, y)
 
                 self.valid_metrics.update('loss', loss.item())
                     
@@ -144,7 +144,7 @@ class Trainer(BaseTrainer):
                 x, y = x.to(self.device), y.to(self.device)
 
                 output = self.feature_net.predict(x)
-                loss = self.criterion(output, y, self.class_weights, self.device)
+                loss = self.criterion(output, y)
 
                 self.test_metrics.update('loss', loss.item())
                     
