@@ -15,13 +15,12 @@ In the first stage, the feature representation network is trained to capture the
 
 # Installation
 DREAM depends on numpy, scipy, pandas, tqdm, scikit-learn, TorchCRF, pytorch_metric_learning, and PyTorch (CUDA toolkit if use GPU). You must have them installed before using DREAM.
-### $ conda create -n DREAM python=3.7
-    $ conda activate fame
-    $ conda install numpy scipy pandas tqdm scikit-learn
-    $ conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch-lts -c nvidia
-    $ conda install -c conda-forge rdkit
-    $ conda install pyg -c pyg -c conda-forge
-
+### 
+    $ conda create -n DREAM python=3.9.7
+    $ conda activate DREAM
+    $ conda install scipy pandas scikit-learn TorchCRF pytorch_metric_learning
+    $ conda install numpy=1.21.2
+    $ conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 
 # Usage
 
