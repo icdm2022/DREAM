@@ -102,7 +102,7 @@ def load_edf_folds(np_data_path, n_folds, idx):
 
 
 
-def load_folds_semi_spervised(n_folds, idx):
+def load_folds_semi_sup(n_folds, idx):
     np.random.seed(SEED)
     
     edf_20_files = sorted(glob(os.path.join('data_npz/edf_20_fpzcz', "*.npz")))
