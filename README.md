@@ -14,7 +14,7 @@ In the first stage, the feature representation network is trained to capture the
 ![DREAM](https://user-images.githubusercontent.com/107287907/173477720-540c4f92-54c5-42a5-a4ae-ff2d1cc53e93.png)
 
 # Installation
-Used modules: numpy, scipy, pandas, tqdm, scikit-learn, TorchCRF, pytorch_metric_learning, and PyTorch (CUDA toolkit if use GPU). 
+Used modules: numpy, scipy, pandas, scikit-learn, TorchCRF, pytorch_metric_learning, and PyTorch (CUDA toolkit if use GPU). 
 
     $ conda create -n DREAM python=3.9.7
     $ conda activate DREAM
