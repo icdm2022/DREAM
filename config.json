@@ -17,7 +17,8 @@
         "const_weight": 20000,
         "beta_d": 1,
         "beta_y": 1,
-        "warmup": 10
+        "warmup": 10,
+        "const_weight_ratio": 0.5
     },
     "data_loader": {
         "args": {
