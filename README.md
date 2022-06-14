@@ -35,11 +35,11 @@ Run the following scripts to download and preprocess SleepEDF-20 dataset
 ##  Training DREAM
 Run the following scripts to train DREAM
 
-For Supervised DREAM
+For **supervised DREAM**,
 
     $ batch job_batch.txt 
     
-For Semi-supervised DREAM
+For **semi-supervised DREAM**,
 
     $ batch job_batch_semi_sup.txt 
 
