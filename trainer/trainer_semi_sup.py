@@ -1,7 +1,7 @@
 import numpy as np
 import torch
-from base.base_trainer_proposed_method import BaseTrainer
-from utils import inf_loop, MetricTracker
+from base_trainer import BaseTrainer
+from utils import MetricTracker
 import torch.nn as nn
 from sklearn.metrics import confusion_matrix, f1_score, accuracy_score
 
