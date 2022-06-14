@@ -91,7 +91,7 @@ if __name__ == '__main__':
     config = ConfigParser.from_args(args, fold_id)
     
     data_config = dict()
-    folds_data = load_folds_semi_spervised(config["data_loader"]["args"]["num_folds"], fold_id)
+    folds_data = load_folds_semi_sup(config["data_loader"]["args"]["num_folds"], fold_id)
     data_config['d_type'] = 'edf'
     data_config['sampling_rate'] = 100
     
