@@ -26,5 +26,9 @@ DREAM depends on numpy, scipy, pandas, tqdm, scikit-learn, TorchCRF, pytorch_met
 
 ## Data
 
+    $ bash download_edf20.sh
+    $ python prepare_physionet.py
+    
 ##  Training DREAM
+    $ batch job_batch.txt 
 
