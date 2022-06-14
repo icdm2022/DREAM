@@ -47,7 +47,7 @@ class Trainer(BaseTrainer):
             
             all_loss = self.feature_net.get_losses(x, y, d)
             output = self.feature_net.predict(x)
-            loss = self.criterion(output, y, self.device)
+            loss = self.criterion(output, y)
 
             all_loss.backward()
             self.featurenet_optimizer.step()
@@ -94,7 +94,7 @@ class Trainer(BaseTrainer):
                 x, y = x.to(self.device), y.to(self.device)
 
                 output = self.feature_net.predict(x)
-                loss = self.criterion(output, y, self.device)
+                loss = self.criterion(output, y)
 
                 self.valid_metrics.update('loss', loss.item())
                     
@@ -125,7 +125,7 @@ class Trainer(BaseTrainer):
                 x, y = x.to(self.device), y.to(self.device)
 
                 output = self.feature_net.predict(x)
-                loss = self.criterion(output, y, self.device)
+                loss = self.criterion(output, y)
 
                 self.test_metrics.update('loss', loss.item())
                     
