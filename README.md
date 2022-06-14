@@ -25,12 +25,9 @@ DREAM depends on numpy, scipy, pandas, tqdm, scikit-learn, TorchCRF, pytorch_met
 # Usage
 
 ## Data
-Run the following script to download SleepEDF-20 dataset
+Run the following scripts to download and preprocess SleepEDF-20 dataset
 
     $ bash download_edf20.sh
-    
-Preprocess the dataset
-
     $ python prepare_physionet.py
     
 ##  Training DREAM
