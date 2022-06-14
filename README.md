@@ -29,7 +29,7 @@ Run the following scripts to download and preprocess SleepEDF-20 dataset
 
     $ cd data/edf_20
     $ bash download_edf_20.sh
-    $ cd ../..
+    $ cd ../../preprocess
     $ python preprocess_edf.py
     
 ##  Training DREAM
