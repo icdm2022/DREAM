@@ -7,7 +7,7 @@ Sleep staging is a key challenge in diagnosing and treating sleep-related diseas
 
 # Framework
 
-The proposed framework **DREAM** consists of two main networks: **(i) Feature representation network** that transforms the input sleep segment into sleep-relevant and subject-invariant feature representations based on the VAE framework and **(ii) Classification network** that captures the dependencies between sleep segments in the sequential context to find the best corresponding sleep stage sequence. 
+The proposed framework **DREAM** consists of two main networks: **(i) Feature representation network** that transforms the input sleep segment into sleep-relevant and subject-invariant feature representations based on the VAE framework and **(ii) Sleep Stage Classification network** that captures the dependencies between sleep segments in the sequential context to find the best corresponding sleep stage sequence. 
 
 In the first stage, the feature representation network is trained to capture the sleep-relevant and subject-invariant representation from one input sleep segment. In the second stage, the trained feature representation network with fixed weights is employed to generate the sequence of the representations for all segments of the input sequence, which is then used as input for the classification network to identify the corresponding sleep stage sequence.
 
